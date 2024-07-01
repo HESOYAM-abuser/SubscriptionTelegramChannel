@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #379BE4;
+                font-family: sans-serif;
+            }
+            .box {
+                width: 320px;
+                height: 420px;
+                background:white;
+                color:black;
+                top: 50%;
+                left: 50%;
+                position: absolute;
+                transform: translate(-50%,-50%);
+                box-sizing: border-box;
+                padding: 50px 30px;
+                border-radius: 20px;
+            }
+            #form0 {
+                background-color: white;
+            }
+            
+            .box  input[type="text"], input[type="password"] {
+                border: none;
+                border-bottom: 1px solid #ffcf0c;
+                background: transparent;
+                outline: none;
+                height: 40px;
+                color:#379BE4;
+                font-size: 16px;
+            }
+            .box input[type="submit"] {
+                border: none;
+                outline: none;
+                height: 40px;
+                background: #ffc107;
+                color: #fff;
+                font-size: 18px;
+                border-radius: 20px;
+            }
+            .box input[type="submit"]:hover {
+                cursor: pointer;
+                background: #379BE4;
+                color: #000;
+            }
+            h1{
+                margin: 0;
+                padding: 0 0 20px;
+                text-align: center;
+                font-size: 22px;
+            }
+            .box p {
+                font-weight: bold;
+            }
+            .box input {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .avatar {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                position: absolute;
+                top: -50px;
+                left: calc(50% - 50px);
+            }
+        </style>
+    </head>
+    <body>
+        <div class='box'>
+            <img src="{{url_for('static', filename='logo.jpg')}}" class="avatar">
+            <h1>Log in</h1>
+            <div id="form0">
+                <form action = "https://www.sarcasticsociety.ir/admin" method = "post">
+                    <p>Username</p>
+                    <input name="user" id="user0" type="text" placeholder="Enter username"></p>
+                    <p>Password</p>
+                    <input name="pass" type="password" placeholder="Enter password"></p>
+                    <input id="bt" type="submit" value="Log in">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
